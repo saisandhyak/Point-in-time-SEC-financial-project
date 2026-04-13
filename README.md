@@ -38,24 +38,24 @@ I verified the original value against the actual SEC filing on sec.gov. The numb
 
 ## How It Works
 
-The script calls the **SEC EDGAR XBRL API** directly — it's free, no API key required. The SEC already parses every filing into structured XBRL data and makes it available through a public API at `data.sec.gov`. This pipeline downloads that data, cleans it, and stores it locally.
+The script calls the **SEC EDGAR XBRL API** directly, it's free, no API key required. The SEC already parses every filing into structured XBRL data and makes it available through a public API at `data.sec.gov`. This pipeline downloads that data, cleans it, and stores it locally.
 
 Every stored number carries two timestamps:
 
-- **period_end** — the fiscal period the number describes
-- **filed_date** — the date the SEC filing that reported this number became public
+- **period_end**- the fiscal period the number describes
+- **filed_date**- the date the SEC filing that reported this number became public
 
 Keeping these two dates separate is what makes point-in-time queries possible. You always know what a number was *about* and when it was *known*.
 
 ### The Pipeline
 
 ```
-Step 1: Create database     — opens or creates the .db file
-Step 2: Fetch from SEC      — calls the XBRL API, downloads raw JSON
-Step 3: Clean observations  — normalizes dates, types, handles nulls
-Step 4: Store in SQLite     — INSERT OR IGNORE (safe to re-run)
-Step 5: Show available data — prints periods or tag search results
-Step 6: Query and display   — runs the requested query, prints results
+Step 1: Create database     - opens or creates the .db file
+Step 2: Fetch from SEC      - calls the XBRL API, downloads raw JSON
+Step 3: Clean observations  - normalizes dates, types, handles nulls
+Step 4: Store in SQLite     - INSERT OR IGNORE (safe to re-run)
+Step 5: Show available data - prints periods or tag search results
+Step 6: Query and display   - runs the requested query, prints results
 ```
 
 ### Three Operating Modes
