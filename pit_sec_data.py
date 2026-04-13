@@ -1,4 +1,4 @@
-SEC_USER_AGENT = ""   
+SEC_USER_AGENT = "YourName yourname@email.com"   
 DB_PATH        = r"pit_sec_data.db"              
 CIK            = ""                   
 METRIC         = ""  
