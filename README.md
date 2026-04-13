@@ -225,11 +225,11 @@ The data comes from the SEC's own parsed XBRL API — the same data they validat
 
 ## Design Decisions
 
-**Why keep all observations?** — Most SEC data tools deduplicate and only keep the latest value per period. That destroys the revision history. This tool keeps every observation from every filing. If the same value appears in three filings, it stores three rows, each with a different accession number and filed date. That's the audit trail.
+**Why keep all observations?** - Most SEC data tools deduplicate and only keep the latest value per period. That destroys the revision history. This tool keeps every observation from every filing. If the same value appears in three filings, it stores three rows, each with a different accession number and filed date. That's the audit trail.
 
-**Why SQLite?** — It runs locally, needs no setup, handles millions of rows, and the `.db` file is easy to share. You can also open it in [DB Browser for SQLite](https://sqlitebrowser.org/) to browse the data visually.
+**Why SQLite?** - It runs locally, needs no setup, handles millions of rows, and the `.db` file is easy to share. You can also open it in [DB Browser for SQLite](https://sqlitebrowser.org/) to browse the data visually.
 
-**Why the CompanyFacts API and not the Frames API?** — The SEC's Frames API deduplicates by design — it returns only one value per company per period. That's the opposite of what this project needs.
+**Why the CompanyFacts API and not the Frames API?** - The SEC's Frames API deduplicates by design — it returns only one value per company per period. That's the opposite of what this project needs.
 
 ---
 
