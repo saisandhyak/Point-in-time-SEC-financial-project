@@ -69,16 +69,7 @@ Step 6: Query and display   - runs the requested query, prints results
 ---
 
 ## Getting Started
-
-### 1. Clone and Install
-
-```bash
-git clone https://github.com/yourusername/pit-sec-data.git
-cd pit-sec-data
-pip install tabulate   # optional, for prettier table output
-```
-
-### 2. Set Your Identity
+### 1. Set Your Identity
 
 Open `pit_sec_data.py` and change the first line:
 
@@ -88,7 +79,7 @@ SEC_USER_AGENT = "YourName yourname@email.com"   # CHANGE THIS — required by S
 
 The SEC requires a user-agent string with your name and email for API access. No registration or API key needed.
 
-### 3. Run It
+### 2. Run It
 
 ```bash
 python pit_sec_data.py
@@ -96,7 +87,7 @@ python pit_sec_data.py
 
 On the first run with default settings, it downloads all facts for the default company and shows available period dates. The database file is created automatically next to the script.
 
-### 4. Explore
+### 3. Explore
 
 Change the config variables at the top of the file to try different companies, metrics, and dates:
 
