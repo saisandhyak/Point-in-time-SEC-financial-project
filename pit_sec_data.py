@@ -1,4 +1,4 @@
-SEC_USER_AGENT = "saisandhyak13@gmail.com"   
+SEC_USER_AGENT = ""   
 DB_PATH        = r"pit_sec_data.db"              
 CIK            = ""                   
 METRIC         = ""  
