@@ -60,11 +60,11 @@ Step 6: Query and display   - runs the requested query, prints results
 
 ### Three Operating Modes
 
-**Ingest mode** — Set `METRIC = "ALL"` to download every fact for a company. One API call, thousands of observations, stored permanently.
+**Ingest mode** - Set `METRIC = "ALL"` to download every fact for a company. One API call, thousands of observations, stored permanently.
 
-**Search mode** — Set `SEARCH_TAGS = "Revenue"` (or any keyword) to find the exact XBRL tag names a company uses. Shows matching tags with their date ranges.
+**Search mode** - Set `SEARCH_TAGS = "Revenue"` (or any keyword) to find the exact XBRL tag names a company uses. Shows matching tags with their date ranges.
 
-**Query mode** — Set a specific metric and period to see the full revision history. Optionally set an as-of date for a point-in-time answer.
+**Query mode** - Set a specific metric and period to see the full revision history. Optionally set an as-of date for a point-in-time answer.
 
 ---
 
